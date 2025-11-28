@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Elizaveta-r/3-column-preview-card-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://3-column-preview-card-component-amber-delta.vercel.app)
 
 ## My process
 
