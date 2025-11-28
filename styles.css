@@ -1,0 +1,151 @@
+:root {
+  --gold: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --green: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  color: var(--white);
+  background: var(--gray);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 1.633rem;
+  margin-top: 5.867rem;
+}
+
+.card {
+  padding: 3.067rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.667rem;
+
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  border-radius: 0.533rem;
+}
+
+.card.sedan {
+  background: var(--gold);
+  box-shadow: 0px 5px 6px 0px rgba(227, 136, 38, 0.25);
+
+  border-top-left-radius: 0.533rem;
+  border-bottom-left-radius: 0.533rem;
+}
+
+.card.suvs {
+  background: var(--cyan);
+  box-shadow: 0px 5px 6px 0px rgba(0, 105, 112, 0.25);
+}
+
+.card.luxury {
+  background: var(--green);
+  box-shadow: 0px 5px 6px 0px rgba(0, 66, 65, 0.25);
+
+  border-top-right-radius: 0.533rem;
+  border-bottom-right-radius: 0.533rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.133rem;
+}
+
+.icon {
+  width: 66px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.667rem;
+}
+
+.title {
+  font-size: 2.667rem;
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.667rem;
+  color: var(--white);
+  font-weight: 400;
+}
+
+.btn {
+  border: none;
+  padding: calc(1rem - 2px) 2.133rem;
+  border-radius: 100px;
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.card.sedan .btn {
+  color: var(--gold);
+}
+
+.card.suvs .btn {
+  color: var(--cyan);
+}
+
+.card.luxury .btn {
+  color: var(--green);
+}
+
+.card.sedan .btn:hover,
+.card.suvs .btn:hover,
+.card.luxury .btn:hover {
+  color: var(--gray);
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 920px;
+    margin-top: 11.467rem;
+    height: 500px;
+  }
+
+  .card {
+    padding: 3.133rem;
+    justify-content: space-between;
+  }
+}
